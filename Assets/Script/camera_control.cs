@@ -15,7 +15,7 @@ public class camera_control : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
+        transform.position = new Vector3(player.position.x, player.position.y, player.transform.position.z-100);
     }
 
     void stop_shake()
