@@ -58,7 +58,7 @@ public class wolf : Enemy
                 {
                     if(anim.GetBool("attack"))
                     {
-                        speed = attack_speed;
+                        
                         attack();
                     }
                     else
@@ -84,6 +84,7 @@ public class wolf : Enemy
         float dis = (new Vector2(transform.position.x, transform.position.y) - new Vector2(player.position.x, player.position.y)).sqrMagnitude;
         if(dis<attack_range)
         {
+            speed = 0;
             anim.SetBool("attack", true);
         }
         else
@@ -115,6 +116,7 @@ public class wolf : Enemy
 
     void attack_start()
     {
+        speed = attack_speed;
         damage = attack_damage;
     }
 
