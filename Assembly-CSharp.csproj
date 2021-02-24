@@ -57,6 +57,7 @@
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\camera_control.cs" />
     <Compile Include="Assets\Script\player_control.cs" />
+    <Compile Include="Assets\Script\effects_animation.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\shader\2d.shader" />

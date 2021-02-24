@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     public int health;
     public GameObject darkEffect;
     public GameObject darkEffect_ex;
+    public GameObject Effect_anim;
+    public Animator camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,9 @@ public void be_attacked(int damage,Transform player)
 
         Instantiate(darkEffect_ex, new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, player.position.z) - 0.1f),
             Quaternion.identity);
+        Instantiate(Effect_anim, new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, player.position.z) - 0.1f),
+            Quaternion.identity);
+        camera.SetBool("shake", true);
         health -= damage;
     }
 
