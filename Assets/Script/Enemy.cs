@@ -30,11 +30,4 @@ public class Enemy : MonoBehaviour
         health -= damage;
     }
 
-    public virtual void Dead()
-    {
-        if(health<=0)
-        {
-            Destroy(gameObject);
-        }
-    }
 }

@@ -9,6 +9,7 @@ public class player_control : MonoBehaviour
     private Animator anim;
     public float run_speed;
     public Transform sign_pos;
+    public int health;
 
     float speed;
     Vector3 mousePostion;
@@ -17,7 +18,7 @@ public class player_control : MonoBehaviour
     float mouse2player_tx; 
     float mouse2player_ty;
 
-    public int damage;
+    public int attack_damage;
 
 
     // Start is called before the first frame update
@@ -32,14 +33,6 @@ public class player_control : MonoBehaviour
     void Update()
     {
 
-        
-        //if (Input.GetMouseButtonDown(0))
-
-            
-
-
-
-
 
         if (anim.GetBool("attack"))
         {
@@ -48,8 +41,6 @@ public class player_control : MonoBehaviour
         }
         else
         {
-
-
 
 
             speed = run_speed;
@@ -152,7 +143,7 @@ public class player_control : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRange_x, attackRange_y), 0,whatIsEnemies);
         for(int i=0;i<enemiesToDamage.Length;i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(damage,transform);
+            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
         }
     }
 
@@ -161,7 +152,7 @@ public class player_control : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attack_up_Pos.position, new Vector2(attackRange_y, attackRange_x), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(damage, transform);
+            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
         }
     }
 
@@ -170,7 +161,7 @@ public class player_control : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attack_down_Pos.position, new Vector2(attackRange_y, attackRange_x), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(damage, transform);
+            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
         }
     }
 
@@ -180,5 +171,13 @@ public class player_control : MonoBehaviour
         Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRange_x, attackRange_y, 1));
         Gizmos.DrawWireCube(attack_down_Pos.position, new Vector3(attackRange_y, attackRange_x, 1));
         Gizmos.DrawWireCube(attack_up_Pos.position, new Vector3(attackRange_y, attackRange_x, 1));
+    }
+
+
+    public Animator camani;
+    public void be_attacked(int damage, Transform attacker)
+    {
+        camani.SetBool("shake", true);
+        health -= damage;
     }
 }
