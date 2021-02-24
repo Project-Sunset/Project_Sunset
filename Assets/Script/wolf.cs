@@ -21,14 +21,12 @@ public class wolf : Enemy
     float Stiffness_timer;
     bool on_be_attacked=false;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         die();
@@ -79,6 +77,7 @@ public class wolf : Enemy
         rb.velocity = new Vector2(Horizontalmove, Verticalmove).normalized * speed;
     }
 
+//judge whether player will hit enemy
     void Action_judgment()
     {
         float dis = (new Vector2(transform.position.x, transform.position.y) - new Vector2(player.position.x, player.position.y)).sqrMagnitude;
@@ -96,6 +95,7 @@ public class wolf : Enemy
         Verticalmove = player.position.y - transform.position.y;
     }
 
+//judge whether enemy will hit player
     public Transform attackPos;
     public float attackRange_x, attackRange_y;
     public LayerMask whatIsEnemies;
@@ -114,22 +114,20 @@ public class wolf : Enemy
 
     }
 
+//trigger movement
     void attack_start()
     {
         speed = attack_speed;
         damage = attack_damage;
     }
-
     void attack_end()
     {
         damage = 0;
     }
-
     void attack_over()
     {
         anim.SetBool("attack", false);
     }
-
     void die()
     {
         if(health<=0)
@@ -137,13 +135,12 @@ public class wolf : Enemy
             anim.SetBool("die", true);
         }
     }
-
     void dead()
     {
         anim.SetBool("dead", true);
     }
 
-
+//special effects and camera shake
     public override void be_attacked(int damage, Transform attacker)
     {
         if(!anim.GetBool("die"))
@@ -162,15 +159,10 @@ public class wolf : Enemy
                 Instantiate(Effects[i], new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, attacker.position.z) - 0.1f),
                 Quaternion.identity);
             }
-
             camani.SetBool("shake", true);
             health -= damage;
             on_be_attacked = true;
             Stiffness_timer = 0;
         }
-
-
-
-
     }
 }

@@ -1,556 +1,150 @@
 Using pre-set license
-Built from '2020.2/china_unity/release' branch; Version is '2020.2.1f1c1 (252d8215dd99) revision 2436482'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.0) 64bit' Language: 'zh' Physical Memory: 16240 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-F:\unity\Editor\Unity.exe
+/Applications/Unity/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-E:/sunset/Project_Sunset
+/Users/davypumpkin/Desktop/Project_Sunset
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-16162
-Successfully changed project path to: E:/sunset/Project_Sunset
-E:/sunset/Project_Sunset
+55017
+Successfully changed project path to: /Users/davypumpkin/Desktop/Project_Sunset
+/Users/davypumpkin/Desktop/Project_Sunset
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 30.73 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 48.97 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1c1 (252d8215dd99)
-[Subsystems] Discovering subsystems at path F:/unity/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path E:/sunset/Project_Sunset/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/davypumpkin/Desktop/Project_Sunset/Assets
 GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
-    Vendor:   
-    VRAM:     6052 MB
-    Driver:   27.21.14.5167
+2021-02-25 05:35:08.109 Unity[12519:263382] Color LCD preferred device: AMD Radeon Pro 5500M (high power)
+2021-02-25 05:35:08.109 Unity[12519:263382] Metal devices available: 2
+2021-02-25 05:35:08.109 Unity[12519:263382] 0: AMD Radeon Pro 5500M (high power)
+2021-02-25 05:35:08.109 Unity[12519:263382] 1: Intel(R) UHD Graphics 630 (low power)
+2021-02-25 05:35:08.110 Unity[12519:263382] Using device AMD Radeon Pro 5500M (high power)
+Initializing Metal device caps: AMD Radeon Pro 5500M
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Initialize mono
-Mono path[0] = 'F:/unity/Editor/Data/Managed'
-Mono path[1] = 'F:/unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'F:/unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56508
+Mono path[0] = '/Applications/Unity/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56519
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: F:/unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000747 seconds.
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 31.64 ms, found 0 plugins.
+Register platform support module: /Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000458 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 48.99 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.829 seconds
+- Completed reload, in  1.739 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000677 seconds.
+Registered in 0.000733 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 0 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 49.83 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.015 seconds
+- Completed reload, in  1.135 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.20 ms, found 0 plugins.
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launching external process: /Applications/Unity/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1103 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 75.9 MB.
-System memory in use after: 76.0 MB.
+Unloading 2398 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 198.1 MB.
+System memory in use after: 198.3 MB.
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1566.
-Total: 1.970000 ms (FindLiveObjects: 0.164900 ms CreateObjectMapping: 0.096600 ms MarkObjects: 1.660100 ms  DeleteObjects: 0.046800 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0407701ff078305f060c334da7aeede8') in 0.105277 seconds
-  Import took 0.108041 seconds .
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2861.
+Total: 2.005780 ms (FindLiveObjects: 0.275183 ms CreateObjectMapping: 0.116104 ms MarkObjects: 1.591123 ms  DeleteObjects: 0.022408 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.131843 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf1cf3a137564c314b4bbe1791c056d') in 0.005255 seconds
-  Import took 0.008055 seconds .
+  path: Assets/shader/windeffect.shadergraph
+  artifactKey: Guid(068d88e4fa9294c54ac4a6f1dc073ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/shader/windeffect.shadergraph using Guid(068d88e4fa9294c54ac4a6f1dc073ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6be702d78f9de65e6f037046cb84d942') in 0.829925 seconds
+  Import took 0.834408 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 2.787574 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7986df07f313d8aa7a8071805881260e') in 0.004968 seconds
-  Import took 0.007721 seconds .
+Received Prepare
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 152.2 MB.
+System memory in use after: 152.5 MB.
 
-========================================================================
-Received Import Request.
-  Time since last request: 7.485807 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9b780ec1c4296fd742e7a3804577b48') in 0.007318 seconds
-  Import took 0.009951 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.074105 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285c51ae611dea04cee7b377c778de40') in 0.005929 seconds
-  Import took 0.008613 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.667866 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60f0a5b940ff43ad03b9a9a4f9c738b0') in 0.006540 seconds
-  Import took 0.009082 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.394847 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24246b7c5bbf88538f925bfeddce17bc') in 0.006769 seconds
-  Import took 0.009748 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.420678 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd671a746fdaacc2ab2682869699b5282') in 0.004688 seconds
-  Import took 0.007477 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.336458 seconds.
-  path: Assets/prefabs/黑雾喷射 1.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾喷射 1.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c81018260b98a42a4acbe352fdf6e88') in 0.007035 seconds
-  Import took 0.012115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.055482 seconds.
-  path: Assets/prefabs/白光喷射.prefab
-  artifactKey: Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光喷射.prefab using Guid(8616c5e8a0698c546b45517132f6dfe9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a51638df03221151a0a3f904eb788453') in 0.014736 seconds
-  Import took 0.019473 seconds .
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 2861.
+Total: 2.136044 ms (FindLiveObjects: 0.251600 ms CreateObjectMapping: 0.114699 ms MarkObjects: 1.756080 ms  DeleteObjects: 0.012419 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000633 seconds.
+Registered in 0.000818 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.817 seconds
+- Completed reload, in  1.137 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 75.8 MB.
-System memory in use after: 75.9 MB.
+Unloading 2285 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 197.8 MB.
+System memory in use after: 198.0 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1568.
-Total: 1.509800 ms (FindLiveObjects: 0.135600 ms CreateObjectMapping: 0.057000 ms MarkObjects: 1.303700 ms  DeleteObjects: 0.012700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.216499 seconds.
-  path: Assets/prefabs/黑雾爆出 1.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/黑雾爆出 1.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '304addf73efad33558057e1078845d13') in 0.039366 seconds
-  Import took 0.041623 seconds .
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2863.
+Total: 2.049245 ms (FindLiveObjects: 0.291936 ms CreateObjectMapping: 0.123004 ms MarkObjects: 1.616762 ms  DeleteObjects: 0.016369 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.624268 seconds.
-  path: Assets/prefabs/白光爆出.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b032a9439410b5523f4e43d1bd8af34a') in 0.011726 seconds
-  Import took 0.014427 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.978321 seconds.
-  path: Assets/prefabs/白光爆出.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecce1fdb19e2cba5bd0e480efef2b7f4') in 0.006229 seconds
-  Import took 0.008914 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.402776 seconds.
-  path: Assets/prefabs/白光爆出.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ac0c24b6676bd2ea210d46496f8ea07') in 0.005237 seconds
-  Import took 0.007825 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.484246 seconds.
-  path: Assets/prefabs/白光爆出.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d4c45765af481cd58baca93d0fff78') in 0.006323 seconds
-  Import took 0.009521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.418745 seconds.
-  path: Assets/prefabs/白光爆出.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e8a73f629672965b2c0e4c2c0d010c') in 0.006485 seconds
-  Import took 0.009687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.008911 seconds.
-  path: Assets/prefabs/白光爆出.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08e43d53ec08054284a91de6f40d8ba9') in 0.006244 seconds
-  Import took 0.009357 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.542332 seconds.
-  path: Assets/prefabs/白光爆出.prefab
-  artifactKey: Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出.prefab using Guid(8c9724a1a9527f5468939bb8423e26fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d0357dcdb3e4c969e0942883068ddbf') in 0.005254 seconds
-  Import took 0.008461 seconds .
+  Time since last request: 417.298076 seconds.
+  path: Assets/UniversalRenderPipelineAsset_Renderer.asset
+  artifactKey: Guid(e4c57dc6c37ac45bca6ed6989c0c9113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineAsset_Renderer.asset using Guid(e4c57dc6c37ac45bca6ed6989c0c9113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ef6a01afa020b233a36309b04cf3579') in 0.321635 seconds
+  Import took 0.325564 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000998 seconds.
+Registered in 0.000755 seconds.
 Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.809 seconds
+- Completed reload, in  0.983 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.37 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.1 MB.
-System memory in use after: 76.2 MB.
+Unloading 2285 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 202.3 MB.
+System memory in use after: 202.5 MB.
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1570.
-Total: 2.508600 ms (FindLiveObjects: 0.122300 ms CreateObjectMapping: 0.035800 ms MarkObjects: 2.330500 ms  DeleteObjects: 0.018300 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2865.
+Total: 1.939934 ms (FindLiveObjects: 0.242340 ms CreateObjectMapping: 0.105259 ms MarkObjects: 1.578203 ms  DeleteObjects: 0.012985 ms)
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000705 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.29 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.830 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.4 MB.
-System memory in use after: 76.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1572.
-Total: 1.469900 ms (FindLiveObjects: 0.126000 ms CreateObjectMapping: 0.033700 ms MarkObjects: 1.297100 ms  DeleteObjects: 0.011800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.589130 seconds.
-  path: Assets/prefabs/白光喷射 1.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光喷射 1.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b21c7fbc5eb53a49fc30cfccde7ef078') in 0.043061 seconds
-  Import took 0.044853 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.192146 seconds.
-  path: Assets/prefabs/白光喷射 1.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光喷射 1.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c00dec38b35a61840bff5e1a6a5f310') in 0.004725 seconds
-  Import took 0.006959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.199607 seconds.
-  path: Assets/prefabs/白光喷射 1.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光喷射 1.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '694e3aa57b43f09d3bf3619261096893') in 0.006830 seconds
-  Import took 0.009859 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.730711 seconds.
-  path: Assets/prefabs/白光喷射 1.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光喷射 1.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1c412f2e7343df3d0e30232cb2a55a0') in 0.006214 seconds
-  Import took 0.008717 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.341967 seconds.
-  path: Assets/prefabs/白光喷射 1.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光喷射 1.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '439d8bc251a34f81e5132aa70cd10b3d') in 0.006228 seconds
-  Import took 0.009152 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.987175 seconds.
-  path: Assets/prefabs/白光喷射 1.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光喷射 1.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85f07d48facfef89f675f1fdd2806e3a') in 0.006910 seconds
-  Import took 0.009922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.555049 seconds.
-  path: Assets/prefabs/血液喷射.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/血液喷射.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd59c51621d931fea16e5a3a0bdc17df3') in 0.012809 seconds
-  Import took 0.015208 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.016822 seconds.
-  path: Assets/prefabs/血液喷射.prefab
-  artifactKey: Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/血液喷射.prefab using Guid(9691c1a17fb64344a8741ce676bfd43c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd59c51621d931fea16e5a3a0bdc17df3') in 0.005194 seconds
-  Import took 0.007584 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.911032 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c938c051c9e8dbbe4c3b8885bacf49d5') in 0.011193 seconds
-  Import took 0.013670 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015040 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c938c051c9e8dbbe4c3b8885bacf49d5') in 0.004948 seconds
-  Import took 0.007089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.917056 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37cf0e4aea01f010a45bfb662ca9118d') in 0.005608 seconds
-  Import took 0.010089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015521 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37cf0e4aea01f010a45bfb662ca9118d') in 0.004695 seconds
-  Import took 0.007082 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.536176 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3713baaa918f1408a8ed0c1c19fe0253') in 0.005501 seconds
-  Import took 0.008035 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.016292 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3713baaa918f1408a8ed0c1c19fe0253') in 0.006796 seconds
-  Import took 0.010131 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.299102 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66064570b827a4d2bd4aaf7e4b753dc') in 0.004929 seconds
-  Import took 0.007604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015639 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e66064570b827a4d2bd4aaf7e4b753dc') in 0.005007 seconds
-  Import took 0.008121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.048098 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8454ccb7481f9b52e94ea63eabc988f8') in 0.005448 seconds
-  Import took 0.011637 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015237 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8454ccb7481f9b52e94ea63eabc988f8') in 0.006986 seconds
-  Import took 0.010756 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.370569 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98cf8096c038bddbf215aeb3bc1efad2') in 0.005436 seconds
-  Import took 0.008053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.016145 seconds.
-  path: Assets/prefabs/白光爆出 1.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/白光爆出 1.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98cf8096c038bddbf215aeb3bc1efad2') in 0.006390 seconds
-  Import took 0.009046 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.091375 seconds.
-  path: Assets/prefabs/血液爆出.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/血液爆出.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6f0b9d9b6876e984fc8ab041421e3b') in 0.011847 seconds
-  Import took 0.015745 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002485 seconds.
-  path: Assets/prefabs/血液爆出.prefab
-  artifactKey: Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/prefabs/血液爆出.prefab using Guid(0964230fb6115ce44ae9de04c0e74de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca6f0b9d9b6876e984fc8ab041421e3b') in 0.005445 seconds
-  Import took 0.008472 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000893 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.821 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.4 MB.
-System memory in use after: 76.5 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1574.
-Total: 2.423200 ms (FindLiveObjects: 0.206200 ms CreateObjectMapping: 0.065900 ms MarkObjects: 2.131000 ms  DeleteObjects: 0.018900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000847 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.825 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.9 MB.
-System memory in use after: 77.0 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1576.
-Total: 2.057600 ms (FindLiveObjects: 0.242200 ms CreateObjectMapping: 0.073500 ms MarkObjects: 1.722600 ms  DeleteObjects: 0.017800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000848 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.835 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.1 MB.
-System memory in use after: 77.2 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1578.
-Total: 1.508600 ms (FindLiveObjects: 0.138300 ms CreateObjectMapping: 0.038700 ms MarkObjects: 1.317000 ms  DeleteObjects: 0.013300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000713 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.843 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 77.3 MB.
-System memory in use after: 77.4 MB.
-
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1580.
-Total: 1.436100 ms (FindLiveObjects: 0.131200 ms CreateObjectMapping: 0.035200 ms MarkObjects: 1.255600 ms  DeleteObjects: 0.013300 ms)
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
