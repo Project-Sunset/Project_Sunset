@@ -111,6 +111,11 @@ public class player_control : MonoBehaviour
         rb.velocity = new Vector2(Horizontalmove , Verticalmove ).normalized * speed;
     }
 
+
+
+
+/************************************Animation events***********************************************************/
+
     void attack_over()
     {
         anim.SetBool("attack", false);
@@ -147,7 +152,26 @@ public class player_control : MonoBehaviour
         }
     }
 
-//assist visual positioning
+
+    public GameObject step_anim;
+    void Step_event_left()
+    {
+        Instantiate(step_anim, new Vector3(sign_pos.position.x-0.3f, sign_pos.position.y, sign_pos.position.z),
+            Quaternion.identity);
+    }
+
+    void Step_event_right()
+    {
+        Instantiate(step_anim, new Vector3(sign_pos.position.x + 0.3f, sign_pos.position.y, sign_pos.position.z),
+            Quaternion.identity);
+    }
+    /************************************************************************************************************/
+
+
+
+
+
+    //assist visual positioning
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
@@ -155,6 +179,9 @@ public class player_control : MonoBehaviour
         Gizmos.DrawWireCube(attack_down_Pos.position, new Vector3(attackRange_y, attackRange_x, 1));
         Gizmos.DrawWireCube(attack_up_Pos.position, new Vector3(attackRange_y, attackRange_x, 1));
     }
+
+
+
 
 //special effects and camera shake
     public Animator camani;

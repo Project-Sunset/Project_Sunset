@@ -38,6 +38,7 @@ public class wolf : Enemy
         {
             if(anim.GetBool("die"))
             {
+                //Here, speed is set to a number less than zero to produce the effect of backward when dying
                 speed = -3;
             }
             else
@@ -77,11 +78,15 @@ public class wolf : Enemy
         rb.velocity = new Vector2(Horizontalmove, Verticalmove).normalized * speed;
     }
 
-//judge whether player will hit enemy
+    //judge whether player will hit enemy
+    //Judge whether the player enters the attack range, if so, attack the player, if not, chase the player
     void Action_judgment()
     {
         float dis = (new Vector2(transform.position.x, transform.position.y) - new Vector2(player.position.x, player.position.y)).sqrMagnitude;
-        if(dis<attack_range)
+        //"dis" is the distance between the player and the wolf. 
+        //Here, "sqrMagnitude" is used to calculate the rough result, because it can save CPU performance cost
+
+        if (dis<attack_range)
         {
             speed = 0;
             anim.SetBool("attack", true);
