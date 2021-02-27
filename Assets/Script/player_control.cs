@@ -7,6 +7,7 @@ public class player_control : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     public float run_speed;
+    public float rush_speed;
     public Transform sign_pos;
     public int health;
     public int attack_damage;
@@ -17,6 +18,7 @@ public class player_control : MonoBehaviour
     float Horizontalmove;
     float mouse2player_tx; 
     float mouse2player_ty;
+    bool ready2rush=false;
 
     void Start()
     {
@@ -27,9 +29,60 @@ public class player_control : MonoBehaviour
     void Update()
     {
 //player movement
-        if (anim.GetBool("attack"))
+        if(ready2rush ==false )
         {
-            speed = 0;
+            mousePostion = Input.mousePosition;
+            mousePostion = Camera.main.ScreenToWorldPoint(mousePostion);
+            mouse2player_tx = mousePostion.x - transform.position.x;
+            mouse2player_ty = mousePostion.y - transform.position.y;
+        }
+
+        if (Mathf.Abs(mouse2player_ty) > Mathf.Abs(mouse2player_tx))
+        {
+            if (mouse2player_ty > 0)
+            {
+                anim.SetBool("mouse up", true);
+                anim.SetBool("mouse down", false);
+            }
+            else
+            {
+                anim.SetBool("mouse up", false);
+                anim.SetBool("mouse down", true);
+            }
+        }
+        else
+        {
+            anim.SetBool("mouse up", false);
+            anim.SetBool("mouse down", false);
+        }
+
+        if(Input.GetButtonDown("Rush"))
+        {
+            ready2rush = true;
+        }
+
+
+        if (anim.GetBool("attack")||ready2rush ==true)
+        {
+            if (anim.GetBool("attack"))
+            {
+                speed = 0;
+            }
+            else
+            {
+                speed = rush_speed;
+                anim.SetBool("rush", true);
+                Horizontalmove = mouse2player_tx;
+                Verticalmove = mouse2player_ty;
+                if (mouse2player_tx > 0)
+                {
+                    transform.localScale = new Vector3(-1, 1, 1);
+                }
+                else
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                }
+            }
         }
         else
         {
@@ -71,28 +124,7 @@ public class player_control : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 anim.SetBool("attack", true);
-                mousePostion = Input.mousePosition;
-                mousePostion = Camera.main.ScreenToWorldPoint(mousePostion);
-                mouse2player_tx = mousePostion.x - transform.position.x;
-                mouse2player_ty = mousePostion.y - transform.position.y;
-                if (Mathf.Abs(mouse2player_ty) > Mathf.Abs(mouse2player_tx))
-                {
-                    if (mouse2player_ty > 0)
-                    {
-                        anim.SetBool("mouse up", true);
-                        anim.SetBool("mouse down", false);
-                    }
-                    else
-                    {
-                        anim.SetBool("mouse up", false);
-                        anim.SetBool("mouse down", true);
-                    }
-                }
-                else
-                {
-                    anim.SetBool("mouse up", false);
-                    anim.SetBool("mouse down", false);
-                }
+                
                 if (mouse2player_tx > 0)
                 {
                     transform.localScale = new Vector3(-1, 1, 1);
@@ -164,6 +196,13 @@ public class player_control : MonoBehaviour
     {
         Instantiate(step_anim, new Vector3(sign_pos.position.x + 0.3f, sign_pos.position.y, sign_pos.position.z),
             Quaternion.identity);
+    }
+
+
+    void rush_over()
+    {
+        ready2rush = false;
+        anim.SetBool("rush", false);
     }
     /************************************************************************************************************/
 
