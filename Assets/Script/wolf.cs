@@ -6,11 +6,11 @@ public class wolf : Enemy
 {
     private Rigidbody2D rb;
     private Animator anim;
-
+    public Transform player;
+    public AudioSource deadAudio;
     public float Stiffness_time;
     public float run_speed;
     public float attack_speed;
-    public Transform player;
     public float attack_range;
     public int attack_damage;
 
@@ -25,6 +25,7 @@ public class wolf : Enemy
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        deadAudio.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -78,7 +79,6 @@ public class wolf : Enemy
         rb.velocity = new Vector2(Horizontalmove, Verticalmove).normalized * speed;
     }
 
-    //judge whether player will hit enemy
     //Judge whether the player enters the attack range, if so, attack the player, if not, chase the player
     void Action_judgment()
     {
@@ -137,7 +137,9 @@ public class wolf : Enemy
     {
         if(health<=0)
         {
+            
             anim.SetBool("die", true);
+  
         }
     }
     void dead()
@@ -166,8 +168,10 @@ public class wolf : Enemy
             }
             camani.SetBool("shake", true);
             health -= damage;
+            deadAudio.Play();
             on_be_attacked = true;
             Stiffness_timer = 0;
+
         }
     }
 }
