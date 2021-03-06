@@ -20,23 +20,23 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 69dbbbe53f4144b43a96cd94f07dece8, type: 3}
-    - time: 0.083333336
-      value: {fileID: 21300000, guid: 57f3a9f1458f32d4f9e6ebae51d64d25, type: 3}
-    - time: 0.16666667
-      value: {fileID: 21300000, guid: 2574246b5581a7e40aba4dd97ab6fe43, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: df20e26940d909746a29b80fd49e748a, type: 3}
-    - time: 0.33333334
-      value: {fileID: 21300000, guid: ef0d75b4f8be4cb4fbb5f6e0337df1a3, type: 3}
-    - time: 0.41666666
-      value: {fileID: 21300000, guid: 7e4e4240e5c5c8e448a303f2ed127b23, type: 3}
-    - time: 0.5
-      value: {fileID: 21300000, guid: a55e5f7b77f20f94e834ca68073d2e9b, type: 3}
-    - time: 0.5833333
-      value: {fileID: 21300000, guid: 296b16345ea1d5d4eab3955ef4b5dab8, type: 3}
-    - time: 0.6666667
-      value: {fileID: 21300000, guid: 69dbbbe53f4144b43a96cd94f07dece8, type: 3}
+      value: {fileID: -6756262609976930110, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.06666667
+      value: {fileID: 6451325358657269670, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.15
+      value: {fileID: 4209506801703734187, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.23333333
+      value: {fileID: -2583920765434825362, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.31666666
+      value: {fileID: -5309242004536487288, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.4
+      value: {fileID: 6726195281620299467, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.48333332
+      value: {fileID: 1469103284047367502, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.56666666
+      value: {fileID: 4815020702078061295, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - time: 0.65
+      value: {fileID: -6756262609976930110, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -56,21 +56,21 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 69dbbbe53f4144b43a96cd94f07dece8, type: 3}
-    - {fileID: 21300000, guid: 57f3a9f1458f32d4f9e6ebae51d64d25, type: 3}
-    - {fileID: 21300000, guid: 2574246b5581a7e40aba4dd97ab6fe43, type: 3}
-    - {fileID: 21300000, guid: df20e26940d909746a29b80fd49e748a, type: 3}
-    - {fileID: 21300000, guid: ef0d75b4f8be4cb4fbb5f6e0337df1a3, type: 3}
-    - {fileID: 21300000, guid: 7e4e4240e5c5c8e448a303f2ed127b23, type: 3}
-    - {fileID: 21300000, guid: a55e5f7b77f20f94e834ca68073d2e9b, type: 3}
-    - {fileID: 21300000, guid: 296b16345ea1d5d4eab3955ef4b5dab8, type: 3}
-    - {fileID: 21300000, guid: 69dbbbe53f4144b43a96cd94f07dece8, type: 3}
+    - {fileID: -6756262609976930110, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: 6451325358657269670, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: 4209506801703734187, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: -2583920765434825362, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: -5309242004536487288, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: 6726195281620299467, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: 1469103284047367502, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: 4815020702078061295, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: -6756262609976930110, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.68333334
+    m_StopTime: 0.6666666
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -90,14 +90,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.083333336
+  - time: 0.06666667
     functionName: Step_event_right
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.41666666
+  - time: 0.4
     functionName: Step_event_right
     data: 
     objectReferenceParameter: {fileID: 0}
