@@ -6,8 +6,10 @@ public class player_control : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
+    [SerializeField]private Material material;
     public float run_speed;
     public float rush_speed;
+    private float teleportSpeed;
     public Transform sign_pos;
     public int health;
     public int attack_damage;
@@ -19,6 +21,7 @@ public class player_control : MonoBehaviour
     float mouse2player_tx; 
     float mouse2player_ty;
     bool ready2rush=false;
+    bool ready2teleport=false;
 
     void Start()
     {
@@ -36,7 +39,24 @@ public class player_control : MonoBehaviour
             mouse2player_tx = mousePostion.x - transform.position.x;
             mouse2player_ty = mousePostion.y - transform.position.y;
         }
-
+        if(ready2teleport)
+        {
+            teleportSpeed=Mathf.Clamp01(teleportSpeed+Time.deltaTime);
+            material.SetFloat("_teleportSpeed", teleportSpeed);
+        }
+        else
+        {
+            teleportSpeed = Mathf.Clamp01(teleportSpeed-Time.deltaTime);
+            material.SetFloat("_teleportSpeed", teleportSpeed);
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            ready2teleport = true;
+        }
+        if(Input.GetKeyDown(KeyCode.Y))
+        {
+            ready2teleport = false;
+        }
         if (Mathf.Abs(mouse2player_ty) > Mathf.Abs(mouse2player_tx))
         {
             if (mouse2player_ty > 0)
