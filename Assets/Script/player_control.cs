@@ -18,7 +18,7 @@ public class player_control : MonoBehaviour
     Vector3 mousePostion;
     float Verticalmove;
     float Horizontalmove;
-    float mouse2player_tx; 
+    float mouse2player_tx;
     float mouse2player_ty;
     bool ready2rush=false;
     bool ready2teleport=false;
@@ -90,7 +90,7 @@ public class player_control : MonoBehaviour
             }
             else
             {
-                speed = rush_speed;
+                
                 anim.SetBool("rush", true);
                 Horizontalmove = mouse2player_tx;
                 Verticalmove = mouse2player_ty;
@@ -179,14 +179,14 @@ public class player_control : MonoBehaviour
     public Transform attack_down_Pos;
     public float attackRange_x, attackRange_y;
     public LayerMask whatIsEnemies;
-    void attack()
-    {
-        Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRange_x, attackRange_y), 0,whatIsEnemies);
-        for(int i=0;i<enemiesToDamage.Length;i++)
-        {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
-        }
-    }
+    //void attack()
+    //{
+    //    Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRange_x, attackRange_y), 0,whatIsEnemies);
+    //    for(int i=0;i<enemiesToDamage.Length;i++)
+    //    {
+    //        enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
+    //    }
+    //}
     void attack_up()
     {
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attack_up_Pos.position, new Vector2(attackRange_y, attackRange_x), 0, whatIsEnemies);
@@ -223,6 +223,22 @@ public class player_control : MonoBehaviour
     {
         ready2rush = false;
         anim.SetBool("rush", false);
+    }
+
+    public GameObject rush_start_effect;
+    void rush_start()
+    {
+        speed = 0;
+    }
+
+    void rush_change2black()
+    {
+        speed = rush_speed;
+    }
+
+    void rush_change2normal()
+    {
+        speed = 0;
     }
     /************************************************************************************************************/
 

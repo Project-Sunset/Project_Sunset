@@ -20,23 +20,23 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1750009480064206887, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - time: 0.06666667
-      value: {fileID: -6376882985040556164, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - time: 0.15
-      value: {fileID: 8068940670447693137, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - time: 0.23333333
-      value: {fileID: -866354852695795773, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - time: 0.31666666
-      value: {fileID: -2852486095867744081, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - time: 0.4
-      value: {fileID: -4336256809942333406, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - time: 0.48333332
-      value: {fileID: 4080948776405355881, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - time: 0.56666666
-      value: {fileID: -2753964001887482327, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+      value: {fileID: 5293144341401569971, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - time: 0.083333336
+      value: {fileID: 4548638428636359623, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - time: 0.16666667
+      value: {fileID: -2729792096388647401, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - time: 0.25
+      value: {fileID: -1412900394226023918, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - time: 0.33333334
+      value: {fileID: -4559328491181623428, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - time: 0.41666666
+      value: {fileID: 4121879562276002234, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - time: 0.5
+      value: {fileID: 2002503278335425581, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - time: 0.5833333
+      value: {fileID: -4223314536129891256, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
     - time: 0.65
-      value: {fileID: 1750009480064206887, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+      value: {fileID: -4223314536129891256, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -56,15 +56,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1750009480064206887, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: -6376882985040556164, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: 8068940670447693137, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: -866354852695795773, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: -2852486095867744081, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: -4336256809942333406, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: 4080948776405355881, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: -2753964001887482327, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
-    - {fileID: 1750009480064206887, guid: c5de6f344e663c044ba2adc5dc1dc289, type: 3}
+    - {fileID: 5293144341401569971, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: 4548638428636359623, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: -2729792096388647401, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: -1412900394226023918, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: -4559328491181623428, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: 4121879562276002234, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: 2002503278335425581, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: -4223314536129891256, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
+    - {fileID: -4223314536129891256, guid: 266bec88688b7e74d8bab485fcdc7e53, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -90,14 +90,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.06666667
+  - time: 0.083333336
     functionName: Step_event_right
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.4
+  - time: 0.41666666
     functionName: Step_event_left
     data: 
     objectReferenceParameter: {fileID: 0}
