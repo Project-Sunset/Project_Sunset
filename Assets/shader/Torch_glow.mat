@@ -45,5 +45,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - _Torch_color: {r: 0.9529412, g: 0, b: 0.16612782, a: 0}
+    - _Torch_color: {r: 0.6037736, g: 0.06550375, b: 0.09953216, a: 0}
   m_BuildTextureStacks: []
