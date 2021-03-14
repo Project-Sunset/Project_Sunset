@@ -14,7 +14,7 @@ public class wolf : Enemy
     public float attack_range;
     public int attack_damage;
 
-    int damage=0;
+    int damage=1;
     float speed;
     float Verticalmove;
     float Horizontalmove;
@@ -112,7 +112,7 @@ public class wolf : Enemy
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
                 enemiesToDamage[i].GetComponent<player_control>().be_attacked(damage, transform);
-                damage = 0;
+                damage = 1;
             }
             
         }
@@ -166,7 +166,6 @@ public class wolf : Enemy
                 Instantiate(Effects[i], new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, attacker.position.z) - 0.1f),
                 Quaternion.identity);
             }
-            camani.SetBool("shake", true);
             health -= damage;
             deadAudio.Play();
             on_be_attacked = true;

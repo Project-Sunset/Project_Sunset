@@ -13,6 +13,7 @@ public class player_control : MonoBehaviour
     public Transform sign_pos;
     public int health;
     public int attack_damage;
+    private CamShake camShake;
 
     float speed;
     Vector3 mousePostion;
@@ -259,7 +260,6 @@ public class player_control : MonoBehaviour
 
 
 //special effects and camera shake
-    public Animator camani;
     public GameObject[] dir_Effects;
     public GameObject[] Effects;
     public void be_attacked(int damage, Transform attacker)
@@ -276,7 +276,7 @@ public class player_control : MonoBehaviour
             Instantiate(Effects[i], new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, attacker.position.z) - 0.1f),
             Quaternion.identity);
         }
-        camani.SetBool("shake", true);
+        camShake.CameraShake(0.1f,0.1f);
         health -= damage;
     }
 }
