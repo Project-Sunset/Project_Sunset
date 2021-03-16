@@ -43,7 +43,7 @@ public class CamShake : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            CameraShake(0.1f,0.2f);
+            CameraShake(0.4f,0.1f);
         }
     }
 

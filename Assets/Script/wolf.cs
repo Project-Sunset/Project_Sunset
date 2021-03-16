@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class wolf : Enemy
 {
+    public GameObject cam;
+
     private Rigidbody2D rb;
     private Animator anim;
     public Transform player;
@@ -111,8 +113,8 @@ public class wolf : Enemy
             Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRange_x, attackRange_y), 0, whatIsEnemies);
             for (int i = 0; i < enemiesToDamage.Length; i++)
             {
-                enemiesToDamage[i].GetComponent<player_control>().be_attacked(damage, transform);
-                damage = 1;
+                if(enemiesToDamage[i].GetComponent<Player_movement>().be_attacked(damage, transform));
+                    damage = 0;
             }
             
         }
@@ -170,7 +172,7 @@ public class wolf : Enemy
             deadAudio.Play();
             on_be_attacked = true;
             Stiffness_timer = 0;
-
+            cam.GetComponent<CamShake>().CameraShake(0.2f, 0.1f);
         }
     }
 }

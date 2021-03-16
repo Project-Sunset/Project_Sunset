@@ -12,6 +12,6 @@ public class CamFollow : MonoBehaviour
 
     void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, player.transform.position.z-100);
+        transform.position = new Vector3(player.position.x, player.position.y, player.position.z-100);
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_movement : MonoBehaviour
 {
     public Transform sign_pos;//遮挡标记点
+    public int health;
     public float run_speed;//跑动速度
     public float attack_speed;//攻击时的移动速度
     public float rush_speed;//冲刺时的移动速度
@@ -23,6 +24,7 @@ public class Player_movement : MonoBehaviour
     private float mouse2player_ty;
 
 
+    public GameObject cam;
 
     // Start is called before the first frame update
     void Start()
@@ -53,17 +55,20 @@ public class Player_movement : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
         }
-
+        
+        if (Input.GetButtonDown("Rush"))
+        {
+            mouse2player_tx = mousePostion.x - transform.position.x;
+            mouse2player_ty = mousePostion.y - transform.position.y;
+            animator.SetTrigger("Rush");
+        }
         if (Input.GetButtonDown("Fire1"))
         {
+            Judge_mouse_pos();
             animator.SetTrigger("Attack");
-            Judge_mouse_pos();
+            
         }
-        if(Input .GetButtonDown("Rush"))
-        {
-            animator.SetTrigger("Rush");
-            Judge_mouse_pos();
-        }
+        
         
 
 
@@ -82,7 +87,7 @@ public class Player_movement : MonoBehaviour
             stopX = (mouse2player_tx > 0) ? (mouse2player_tx + 1.5f) : (mouse2player_tx - 1.5f);
             stopY = mouse2player_ty;
         }
-        if (now_cilp.IsName("rush up") || now_cilp.IsName("rush down") || now_cilp.IsName("rush left") || now_cilp.IsName("rush right"))
+        if (now_cilp.IsName("rush left"))
         {
             rb_speed = rush_speed;
             moveDirection = new Vector2(mouse2player_tx, mouse2player_ty).normalized;//攻击时朝鼠标方向移动
@@ -230,4 +235,38 @@ public class Player_movement : MonoBehaviour
                 animator.SetTrigger("Mouse_left");
         }
     }
+
+    //special effects and camera shake
+    public GameObject[] dir_Effects;
+    public GameObject[] Effects;
+    public bool be_attacked(int damage, Transform attacker)
+    {
+        AnimatorStateInfo now_cilp;
+        now_cilp = animator.GetCurrentAnimatorStateInfo(0);
+        if (now_cilp.IsName("rush left"))
+        {
+            return false;
+        }
+        else
+        {
+            Vector2 v2 = (new Vector2(attacker.position.x, attacker.position.y) - new Vector2(transform.position.x, transform.position.y)).normalized;
+            float m = Mathf.Atan2(v2.y, v2.x) * Mathf.Rad2Deg;
+            for (int i = 0; i < dir_Effects.Length; i++)
+            {
+                Instantiate(dir_Effects[i], new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, attacker.position.z) - 0.1f),
+                Quaternion.Euler(new Vector3(0, 0, m + 90)));
+            }
+            for (int i = 0; i < Effects.Length; i++)
+            {
+                Instantiate(Effects[i], new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, attacker.position.z) - 0.1f),
+                Quaternion.identity);
+            }
+
+            health -= damage;
+            cam.GetComponent<CamShake>().CameraShake(0.2f, 0.1f);
+            return true;
+        }
+            
+    }
 }
+
