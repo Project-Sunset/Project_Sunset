@@ -132,7 +132,7 @@ public class Player_movement : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos[0].position, new Vector2(attackRange_x, attackRange_y), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
+            enemiesToDamage[i].GetComponent<AttackInteraction>().be_attacked(attack_damage, transform,true);
         }
     }
     void attack_down()
@@ -140,7 +140,7 @@ public class Player_movement : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos[1].position, new Vector2(attackRange_x, attackRange_y), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
+            enemiesToDamage[i].GetComponent<AttackInteraction>().be_attacked(attack_damage, transform, true);
         }
     }
     void attack_left()
@@ -148,7 +148,7 @@ public class Player_movement : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos[2].position, new Vector2(attackRange_x, attackRange_y), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
+            enemiesToDamage[i].GetComponent<AttackInteraction>().be_attacked(attack_damage, transform, true);
         }
     }
     void attack_right()
@@ -156,7 +156,7 @@ public class Player_movement : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos[3].position, new Vector2(attackRange_x, attackRange_y), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
+            enemiesToDamage[i].GetComponent<AttackInteraction>().be_attacked(attack_damage, transform, true);
         }
     }
 

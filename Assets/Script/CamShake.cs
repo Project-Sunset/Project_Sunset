@@ -5,6 +5,7 @@ using UnityEngine;
 public class CamShake : MonoBehaviour
 {
     public Camera mainCam;
+    public Vector3 adjustPosition;
     float shakeAmount=0;
 
     void Awake() 
@@ -12,6 +13,7 @@ public class CamShake : MonoBehaviour
         if(mainCam==null)
         {
             mainCam=Camera.main;
+            mainCam.transform.localPosition = adjustPosition;
         }
     }
 //core, deside to start and halt the shaking
@@ -36,7 +38,7 @@ public class CamShake : MonoBehaviour
     void StopShake()
     {
         CancelInvoke("StartShake");
-        mainCam.transform.localPosition=Vector3.zero;
+        mainCam.transform.localPosition= adjustPosition;
     }
 //only for test, will remove later
     void Update()

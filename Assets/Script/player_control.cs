@@ -193,7 +193,7 @@ public class player_control : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attack_up_Pos.position, new Vector2(attackRange_y, attackRange_x), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
+            enemiesToDamage[i].GetComponent<AttackInteraction>().be_attacked(attack_damage, transform,true);
         }
     }
     void attack_down()
@@ -201,7 +201,7 @@ public class player_control : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attack_down_Pos.position, new Vector2(attackRange_y, attackRange_x), 0, whatIsEnemies);
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
-            enemiesToDamage[i].GetComponent<Enemy>().be_attacked(attack_damage, transform);
+            enemiesToDamage[i].GetComponent<AttackInteraction>().be_attacked(attack_damage, transform,true);
         }
     }
 

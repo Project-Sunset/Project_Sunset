@@ -1,178 +1,132 @@
-锘縰sing System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class wolf : Enemy
+public class Wolf : EnemyAI
 {
-    public GameObject cam;
-
     private Rigidbody2D rb;
-    private Animator anim;
-    public Transform player;
-    public AudioSource deadAudio;
-    public float Stiffness_time;
-    public float run_speed;
-    public float attack_speed;
-    public float attack_range;
-    public int attack_damage;
+    private Animator animator;
 
-    int damage=1;
-    float speed;
-    float Verticalmove;
-    float Horizontalmove;
-    float Stiffness_timer;
-    bool on_be_attacked=false;
+    [Header("速度")]
+    public float run_speed;//奔跑速度
+    public float attack_speed;//飞扑速度
 
-    void Start()
+    public float rb_speed;//最终作用到rb上的速度大小
+    private Vector2 rb_direction;//最终作用到rb上的速度方向
+
+    [Header("攻击半径")]
+    public float attackRange;//当进入此范围时攻击
+
+    [Header("追击半径")]
+    public float pursuitRange;//当玩家进入此范围时被敌人发现
+
+    [Header("攻击间隔时间")]
+    public float attackInterval;//攻击动画结束后到下一次攻击发起前的调整时间
+    private float attackIntervalTimer;//上面属性的计时器
+
+    public LayerMask Obstacle;
+    // Start is called before the first frame update
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        deadAudio.GetComponent<AudioSource>();
+        attackIntervalTimer = Time.time- attackInterval-1f;
+        rb =GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        AIStart();
     }
 
-    void Update()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        die();
-        if(anim.GetBool("dead"))
+        if(health>0)
         {
-            speed = 0;
-        }
-        else
-        {
-            if(anim.GetBool("die"))
+            rb_direction = ActionJudge().normalized;
+            if (rb_direction.x < 0f)
             {
-                //Here, speed is set to a number less than zero to produce the effect of backward when dying
-                speed = -3;
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
             else
             {
-                if (Stiffness_timer >= Stiffness_time)
-                {
-                    on_be_attacked = false;
-                }
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            }
+            Vector2 velocity_0 = rb.velocity;
+            Vector2 velocity_1 = rb_speed * rb_direction;
+            rb.velocity = Vector2.Lerp(velocity_0, velocity_1, 0.2f);
+        }
+        else
+        {
+            animator.SetBool("die", true);
+        }
 
-                if (on_be_attacked)
+    }
+
+    Vector2 ActionJudge()
+    {
+        float distance = Vector2.Distance(transform.position, target.position);
+        RaycastHit2D raycastObstacle = Physics2D.Raycast(transform.position, target.position - transform.position, Mathf.Min(pursuitRange, distance), Obstacle);
+        //Debug.DrawRay(transform.position, target.position - transform.position, Color.red, pursuitRange);//绘制射线
+        AnimatorStateInfo now_cilp;
+        now_cilp = animator.GetCurrentAnimatorStateInfo(0);
+        if(now_cilp.IsName("attack"))
+        {
+            //print("attack");
+            rb_speed = attack_speed;
+            return rb_direction;
+        }
+        if (now_cilp.IsName("ready2attack"))
+        {
+            //print("attack");
+            rb_speed = 0;
+            return target.position - transform.position;
+        }
+
+
+
+        if (Time.time - attackIntervalTimer < attackInterval)
+        {
+            //print("runaway");
+            rb_speed = run_speed;
+            return (transform.position - target.position);
+        }
+        else
+        {
+            if (distance < pursuitRange)
+            {
+                if(raycastObstacle)
                 {
-                    Stiffness_timer += Time.deltaTime;
-                    speed = -2;
+                    rb_speed = run_speed;
+                    return GetDirfromPath();
                 }
                 else
                 {
-                    if(anim.GetBool("attack"))
+                    if (distance < attackRange)
                     {
-                        
-                        attack();
+                        //print("attack");
+                        animator.SetTrigger("attack");
+                        rb_speed = 0f;
+                        return target.position - transform.position;
                     }
                     else
                     {
-                        Action_judgment();
+                        //print("run");
+                        rb_speed = run_speed;
+                        return target.position - transform.position;
                     }
                 }
+
             }
-        }      
-    }
-
-    void FixedUpdate()
-    {
-        if (Horizontalmove > 0)
-            transform.localScale = new Vector3(-1.5f, 1.5f, 1.5f);
-        else
-            transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-        rb.velocity = new Vector2(Horizontalmove, Verticalmove).normalized * speed;
-    }
-
-    //Judge whether the player enters the attack range, if so, attack the player, if not, chase the player
-    void Action_judgment()
-    {
-        float dis = (new Vector2(transform.position.x, transform.position.y) - new Vector2(player.position.x, player.position.y)).sqrMagnitude;
-        //"dis" is the distance between the player and the wolf. 
-        //Here, "sqrMagnitude" is used to calculate the rough result, because it can save CPU performance cost
-
-        if (dis<attack_range)
-        {
-            speed = 0;
-            anim.SetBool("attack", true);
-        }
-        else
-        {
-            anim.SetBool("run", true);
-            speed = run_speed;
-        }
-        Horizontalmove = player.position.x - transform.position.x;
-        Verticalmove = player.position.y - transform.position.y;
-    }
-
-//judge whether enemy will hit player
-    public Transform attackPos;
-    public float attackRange_x, attackRange_y;
-    public LayerMask whatIsEnemies;
-    void attack()
-    {
-        if(damage>0)
-        {
-            Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRange_x, attackRange_y), 0, whatIsEnemies);
-            for (int i = 0; i < enemiesToDamage.Length; i++)
+            else
             {
-                if(enemiesToDamage[i].GetComponent<Player_movement>().be_attacked(damage, transform));
-                    damage = 0;
+                //print("idle");
+                rb_speed = run_speed;
+                return Vector2.zero;
             }
-            
         }
 
     }
 
-//trigger movement
-    void attack_start()
-    {
-        speed = attack_speed;
-        damage = attack_damage;
-    }
-    void attack_end()
-    {
-        damage = 0;
-    }
-    void attack_over()
-    {
-        anim.SetBool("attack", false);
-    }
-    void die()
-    {
-        if(health<=0)
-        {
-            
-            anim.SetBool("die", true);
-  
-        }
-    }
-    void dead()
-    {
-        anim.SetBool("dead", true);
-    }
 
-//special effects and camera shake
-    public override void be_attacked(int damage, Transform attacker)
+    void AttackOver()
     {
-        if(!anim.GetBool("die"))
-        {
-            Vector2 v2 = (new Vector2(attacker.position.x, attacker.position.y) - new Vector2(transform.position.x, transform.position.y)).normalized;
-            float m = Mathf.Atan2(v2.y, v2.x) * Mathf.Rad2Deg;
-
-            for (int i = 0; i < dir_Effects.Length; i++)
-            {
-                Instantiate(dir_Effects[i], new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, attacker.position.z) - 0.1f),
-                Quaternion.Euler(new Vector3(0, 0, m + 90)));
-            }
-
-            for (int i = 0; i < Effects.Length; i++)
-            {
-                Instantiate(Effects[i], new Vector3(transform.position.x, transform.position.y, Mathf.Min(transform.position.z, attacker.position.z) - 0.1f),
-                Quaternion.identity);
-            }
-            health -= damage;
-            deadAudio.Play();
-            on_be_attacked = true;
-            Stiffness_timer = 0;
-            cam.GetComponent<CamShake>().CameraShake(0.2f, 0.1f);
-        }
+        attackIntervalTimer = Time.time;
     }
 }
