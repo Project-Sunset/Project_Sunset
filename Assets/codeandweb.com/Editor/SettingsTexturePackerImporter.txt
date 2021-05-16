@@ -1,12 +1,15 @@
 version: 2
 importPivots: 1
 tpsheetFileNames:
+- Assets/1版素材/场景01/s01_mountain.tpsheet
 - Assets/2版动画/player_texture.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
+- Assets/1版素材/场景01/s01_mountain.png
 - Assets/2版动画/player_texture.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
 - 
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 enableDebugOutput: 0
